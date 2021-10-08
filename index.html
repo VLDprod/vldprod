@@ -11,8 +11,18 @@
 
 <body>
 
-				<h1> VLDePROD </h1>
+				<h1> VLDPRROD </h1>
 <script>
+				let al = 5;
+				// повторить с интервалом 2 секунды
+let timerId = setInterval(() => function () {
+				alert("Реклама через: " + al);
+				al = al - 1
+				
+}, 1000);
+
+// остановить вывод через 5 секунд
+setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
 setTimeout(function() {
   top.location = "https://www.people-group.su/?r=337781";
 }, 3000);
