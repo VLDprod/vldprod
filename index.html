@@ -5,29 +5,78 @@
 
 <head>
 
-				<meta charset = "UTF-8">				<title>Заголовок страницы</title>
+				<meta charset = "UTF-8">				<title>Заголовок страницы и не только</title>
+				<script data-ad-client="ca-pub-3821394870164133" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
 <body>
+				<style>
+								
+						#myShowBlock {
+					  	width: 100%;
+        height: 50px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #0000cc;
+        border-radius: 10px;
+        color: #0000cc;
+						  }
 
-				<h1> VLDPRROD </h1>
+
+				</style>
+
+				<h1> VLDPROD </h1>
+				
+				<center><div width="300px" height="200" id="myShowBlock"><p id="p1">Реклама будет через: </p></div></center>
+				
+				
+				
+    <div id="header">
+    			<p>
+    							Практично щодня в світі виникають нові професії. У той час з переліку занять пропадають старі професії, що втратили актуальність.<br></br> 
+    У сучасному світі безперервно інновацій та потужного технологічного прориву, більшість професій піддаються автоматизації або роботизації. А якісь зовсім втрачають актуальність. Бухгалтерів замінять штучним інтелектом, а замість хірургів проводити складні операції скоро стануть роботи.<br></br>
+    Кожне десятиліття цей процес прискорюється. Тому велика частина робочої сили всього світу буде перенавчатися згідно з новими вимогами, які навіть можуть здатися вам дивними.
+    							
+    			</p>	
+    </div>
+<style>
+			body 	{
+								background: #ffeabf;
+				}
+</style>
 <script>
+				//Записываем ссылку на элемент в переменную obj
+    var obl = document.getElementById("header");
+    var obj = document.getElementById("myShowBlock");  
+    obj.style.display = "none"; 
+    //obl.style.display = "none";
 				let al = 5;
+	
 				// повторить с интервалом 2 секунды
-let timerId = setInterval(() => function () {
-				alert("Реклама через: " + al);
-				al = al - 1
+    let timerId = setInterval(function () {
+			//	alert("Реклама через: " + String(al));			
+				document.getElementById("p1").innerHTML = "Реклама будет через: " + String(al);
+			obj.style.display = "block";	
+    al = al - 1
+				if (al == 0) { //Сама реклама
+								setTimeout(function() {
+   obl.style.display = "block";	
+obj.style.display = "none";
+}, 3000);	
+clearInterval(timerId);							
+				}
 				
 }, 1000);
 
 // остановить вывод через 5 секунд
-setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
-setTimeout(function() {
-  top.location = "https://www.people-group.su/?r=337781";
-}, 3000);
+//setTimeout(() => { clearInterval(timerId); }, 5000);
+
 </script>
 <! - www.people-group.net ->
+
+
+
 
 <script type = "text / javascript"> (function () {var pgs = document.createElement ('script'); pgs.type = 'text / javascript'; pgs.async = true; pgs.src = ("https : "== document.location.protocol?" https ":" http ") + ': //ads.people-group.net/337781/3/1/'; var s = document.getElementsByTagName ('script') [0]; s.parentNode.insertBefore (pgs, s);}) (); </script>
 
