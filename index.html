@@ -11,19 +11,9 @@
 </head>
 
 <body>
-				<style>
-								
-						#myShowBlock {
-					  	width: 90%;
-        height: 80px;
-        text-align: center;
-       // padding: 15px;
-        border: 3px solid #ff152a;
-        border-radius: 10px;
-        color: #47ff40;}
-     
-						  
-						#p1 {font-size: 20pt; vertical-align: top;}
+				<style>		  
+						#p1 {font-size: 20pt; //vertical-align: top;
+						}
 						#cFakt {
 										width: 100%;
 										padding: 15px;
@@ -45,7 +35,7 @@
 						body 	{
 								//background: #ffeabf;
 								width: 100%;
-								height: 100%;			
+								height: 100%;	
 				}
 				
 				
@@ -67,21 +57,34 @@
 							//	padding-left: 20px;
 				}
 				#top-20 {
-							padding-left: 1.5em;	
+							padding-left: 0.5em;	
 				}
 				#g_i_t {
 								background-color: #ffffff;
 								color: #000000;
 								font-weight: bold;
 				}
+				#reclama {
+								height: 30%;
+								width: 100%;
+								background: #ffffff;
+								overflow:hidden;
+         position:fixed;
+         //top:0px;
+         vertical-align: middle;
+				}
 
 
 				</style>
 
-				<h1>Які професії з'являться у майбутньому? На кого вчитися щоб отримувати велику зарплатню? — Всі відповіді дивись тут!</h1>
+				<center><h1>Які професії з'являться у майбутньому? На кого вчитися щоб отримувати велику зарплатню? — Всі відповіді дивись тут!</h1><center>
 				
-				<center><div id="myShowBlock"><p id="p1">Реклама будет через: </p></div></center>
 				
+				
+				<div id="reclama">
+								<video autoplay="autoplay"><source src="ivan.mp4"></video>
+								<div><button onclick="rec.style.display = 'none';">CLOSE AD</button></div>
+				</div>
 				
 				
     <div id="header">
@@ -172,21 +175,19 @@
 <script>
 				//Записываем ссылку на элемент в переменную obj
     var obl = document.getElementById("header");
-    var obj = document.getElementById("myShowBlock");  
-    obj.style.display = "none"; 
+    var rec = document.getElementById("reclama");
+    rec.style.display = "none";  
     //obl.style.display = "none";
 				let al = 5;
 	
 				// повторить с интервалом 2 секунды
     let timerId = setInterval(function () {
 			//	ads
-				document.getElementById("p1").innerHTML = "Реклама будет через: " + String(al);
-			obj.style.display = "block";	
+				
     al = al - 1
 				if (al == 0) { //Сама реклама
 								setTimeout(function() {
-   obl.style.display = "block";	
-obj.style.display = "none";
+   rec.style.display = "block";
 }, 3000);	
 clearInterval(timerId);							
 				}
